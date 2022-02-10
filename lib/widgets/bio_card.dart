@@ -48,7 +48,6 @@ class BioCard extends StatelessWidget {
               color: Colors.black,
               fontSize: 18,
             ),
-
           ),
           trailing: IconButton(onPressed:onPressed,
               icon:  Icon(trailingIcon))

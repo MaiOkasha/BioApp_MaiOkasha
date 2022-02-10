@@ -73,6 +73,19 @@ class BioScreen extends StatelessWidget {
                 marginBottom: 10,
                 onPressed: (){
                 print('Email');
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  content: const Text('Send Email'),
+                  duration: const Duration(seconds: 3),
+                  backgroundColor: Colors.grey,
+                  action: SnackBarAction(label: 'Dismiss',
+                      onPressed: (){},
+                    textColor: Colors.white,
+                  ),
+                  onVisible: ()=> print('SnackBar is visible now'),
+                  behavior: SnackBarBehavior.floating,
+                  margin: const EdgeInsetsDirectional.only(end: 20,start: 20,bottom: 20),
+                  dismissDirection: DismissDirection.horizontal,
+                ));
                 },
 
               ),
@@ -82,6 +95,20 @@ class BioScreen extends StatelessWidget {
                   trailingIcon:Icons.phone,
                 onPressed: (){
                 print('Mobile');
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  content: const Text('call'),
+                  duration: const Duration(seconds: 3),
+                  backgroundColor: Colors.grey,
+                  action: SnackBarAction(label: 'Dismiss',
+                    onPressed: (){},
+                    textColor: Colors.white,
+                  ),
+                  onVisible: ()=> print('SnackBar is visible now'),
+                  behavior: SnackBarBehavior.floating,
+                  margin: const EdgeInsetsDirectional.only(end: 20,start: 20,bottom: 20),
+                  dismissDirection: DismissDirection.horizontal,
+
+                ));
                 },
               ),
               const Spacer(),
